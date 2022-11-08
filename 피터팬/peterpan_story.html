@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피터팬 : 줄거리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 75px;
+            padding: 1rem;
+            color: black;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1{
+            font-size: 1.5em;
+        }
+        .logo {
+            display : block;
+            margin : auto;
+            padding-bottom: 30px;
+            border-bottom: 5px solid gray;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        .story_image {
+            text-align: center;
+            padding-top: 50px;
+        }
+        image {
+            margin-top: 10px;
+        }
+        .button {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background: #eee;
+            bottom: 40px;
+            right: 50px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 63px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Peter Pan</h1>
+        <nav>
+            <span>
+                <a href="index.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                HOME
+                </a>
+            </span>
+            <span>
+                <a href="peterpan_story.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                STORY
+                </a>
+            </span>
+            <span>
+                <a href="peterpan_characters.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                CHARACTERS
+                </a>
+            </span>
+        </nav>
+      </header> 
+      <div>
+        <image class="logo" src="image/피터팬로고.jpg" width="400" height="200">
+    </div>
+    <div class="story_image">
+        <image src="image/피터팬 동화 1.png">
+        <image src="image/피터팬 동화 2.png">
+        <image src="image/피터팬 동화 3.png">
+        <image src="image/피터팬 동화 4.png">
+        <image src="image/피터팬 동화 5.png">
+        <image src="image/피터팬 동화 6.png">
+        <image src="image/피터팬 동화 7.png">
+        <image src="image/피터팬 동화 8.png">
+        <image src="image/피터팬 동화 9.png">
+    </div>
+        <a href="#" class="button"><image src="image/TOP.png" width="30" height="30"></a>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동화책 : 피터팬</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .page_1{
+            margin: 100px 0px;
+            padding: 120px 50px 300px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .page_1 p{
+            font-size: 1.15em;
+            font-weight: bold;
+        }
+        .page_1 h1{
+            font-size: 4em;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 75px;
+            padding: 1rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header a {
+            text-decoration: none;
+            color: #000;
+        }
+        .section_title {
+            text-align: left;   
+        }
+        .section2{
+            padding: 12px 8%;
+            box-sizing: border-box;
+            justify-content: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .section_title h2{
+            font-size: 2.25em;
+            font-weight: 700;
+            margin: 0 0 0.5em;
+        }
+        .section_title h2 span{
+            margin-left: 28px;
+            font-size: .7em;
+            font-weight: 700;
+            color: #999;
+        }
+        .section_title p{
+            font-size: 1.15em;
+            font-weight: 400;
+        }
+        .links{ 
+            display: flex;
+            justify-content: center;
+            grid-gap: 500px;
+            margin: 20px 0;
+        }
+        .links_page{
+            display: flex;
+            width: fit-content;
+            letter-spacing: -1px;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .links a{
+            text-decoration: none;
+            color: #000;
+        }
+        #wrap {
+            width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            padding-top: 10px;
+        }
+        .logo {
+            padding-bottom: 30px;
+            border-bottom: 5px solid gray;
+            margin: auto;
+        }
+        .GIF {
+            float: left;
+            padding-top: 20px;
+        }
+        .button {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            line-height: 63px;
+            border-radius: 50%;
+            background: #eee;
+            bottom: 40px;
+            right: 50px;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <header>
+        <h1>Peter Pan</h1>
+        <nav>
+            <span>
+                <a href="index.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                HOME
+                </a>
+            </span>
+            <span>
+                <a href="peterpan_story.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                STORY
+                </a>
+            </span>
+            <span>
+                <a href="peterpan_characters.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                CHARACTERS
+                </a>
+            </span>
+        </nav>
+      </header>
+      <div class="page_1">
+          <p>20223537 장호준</p>
+          <p>동화책 소개 : 피터팬</p>
+          <h1>Peter Pan</h1>
+      </div>
+</section>
+<section>
+    <div class="section2">
+        <div class="section_title">
+            <h2>
+                피터팬
+                <span>PETER PAN</span>
+            </h2>
+            <p>
+                영국의 소설가·극작가 제임스 매슈 배리 경이 1904년 발표한 연극<br>
+                <피터 팬: 자라지 않는 아이> 및 동 작품을 1911년에 소설화한 <피터와 웬디>에 등장하는 캐릭터의 이름이다. 영국을 대표하는 동화 중 하나다.
+            </p>
+        </div>
+        <div class="links">
+            <div class="links_page">
+                <a href="peterpan_story.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                피터팬 줄거리
+                </a>
+            </div>
+            <div class="links_page">
+                <a href="peterpan_Characters.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                등장인물
+                </a>
+            </div>
+        </div>
+        <image class="logo" src="image/피터팬로고.jpg" width="400" height="200">
+        <div id="wrap">
+            <image class="GIF" src="image/Peter Pan_GIF_1.gif" width="500" height="250">
+            <image class="GIF" src="image/Peter Pan_GIF_2.gif" width="500" height="250">
+            <image class="GIF" src="image/Peter Pan_GIF_3.gif" width="500" height="250">
+            <image class="GIF" src="image/Peter Pan_GIF_4.gif" width="500" height="250">
+        </div>
+    </div>
+</section>
+<a href="#" class="button"><image src="image/TOP.png" width="30" height="30"></a>
+</body>
+</html>
