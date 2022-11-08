@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피터팬 : 등장인물</title>
+    <script>
+        function ZoomIn(event) {
+            event.target.style.transform = "scale(1.2)";
+            event.target.style.zIndex = 1;
+            event.target.style.transition = "all 0.5s";
+        }
+        function ZoomOut(event) {
+            event.target.style.transform = "scale(1)";
+            event.target.style.zIndex = 0;
+            event.target.style.transition = "all 0.5s";
+        }   
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 75px;
+            padding: 1rem;
+            color: black;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1{
+            font-size: 1.5em;
+        }
+        .logo {
+            display : block;
+            margin : auto;
+            padding-bottom: 30px;
+            border-bottom: 5px solid gray;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        .characters {
+            padding: 50px 8%;
+            box-sizing: border-box;
+            flex-direction: column;
+        }
+        .characters p {
+            font-size: 25px;
+            padding-top: 20px;
+            color: white;
+        }
+        .characters h1 {
+            font-size: 40px;
+            padding-bottom: 10px;
+            color: white;
+        }
+        .characters img {
+            margin: 50px 0 50px 50px;
+            text-align: left;
+        }
+        .character1 {
+            background-color: green;
+            display : flex;
+            align-items : center;
+            border-radius: 25px;
+        }
+        .character2 {
+            background-color: yellowgreen;
+            display : flex;
+            align-items : center;
+            border-radius: 25px;
+        }
+        .character3 {
+            background-color: skyblue;
+            display : flex;
+            align-items : center;
+            border-radius: 25px;
+        }
+        .character4 {
+            background-color: darkred;
+            display : flex;
+            align-items : center;
+            border-radius: 25px;
+        }
+        .character_description {
+            margin-left: 50px;
+        }
+        .button {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background: #eee;
+            bottom: 40px;
+            right: 50px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 63px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Peter Pan</h1>
+        <nav>
+            <span>
+                <a href="index_peterpan.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                HOME
+                </a>
+            </span>
+            <span>
+                <a href="peterpan_story.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                STORY
+                </a>
+            </span>
+            <span>
+                <a href="peterpan_characters.html"
+                onmouseover="this.style.color='red'"
+                onmouseout="this.style.color='black'">
+                CHARACTERS
+                </a>
+            </span>
+        </nav>
+      </header> 
+      <div>
+        <image class="logo" src="peterpan_image/피터팬로고.jpg" width="400" height="200">
+    </div>
+    <div class="characters">
+        <div class="character1">
+            <image src="peterpan_image/피터팬.png" width="300" height="300" onmouseenter="ZoomIn(event)" onmouseleave="ZoomOut(event)">
+            <div class ="character_description">
+                <h1>피터팬</h1>
+                <p>"너에겐 아직 꿈을 이룰 충분한 시간이 있어"</p>
+                <p>네버랜드에 살고 있으며 잃어버린 아이들의 대장
+                    <br>영원히 12살의 어린아이로 머문다.</p>
+            </div>
+        </div>
+        <div class="character2">
+            <image src="peterpan_image/팅커벨.png" width="300" height="300" onmouseenter="ZoomIn(event)" onmouseleave="ZoomOut(event)">
+            <div class ="character_description">
+                <h1>팅커벨</h1>
+                <p>"피터팬! 이번엔 어디로 모험을 갈까?"</p>
+                <p>피터팬을 따라다니는 요정 매우 새침하고 토라지기 쉽다.<br>
+                피터팬을 좋아하는 웬디를 질투한다.</p>
+            </div>
+        </div>
+        <div class="character3">
+            <image src="peterpan_image/웬디.png" width="300" height="300" onmouseenter="ZoomIn(event)" onmouseleave="ZoomOut(event)">
+            <div class ="character_description">
+                <h1>웬디 달링</h1>
+                <p>"난 요정을 믿어요"</p>
+                <p>달링가의 장녀이자 두 동생의 누나<br>
+                피터 팬의 손에 이끌려 <br>
+                동생들과 함께 네버랜드로 향하여 모험을 한다.</p>
+            </div>
+        </div>
+        <div class="character4">
+            <image src="peterpan_image/후크선장.png" width="300" height="300" onmouseenter="ZoomIn(event)" onmouseleave="ZoomOut(event)">
+            <div class ="character_description">
+                <h1>후크 선장</h1>
+                <p>"내 팔!!"</p>
+                <p>네버랜드에 살고 있는 해적, 피터팬의 영원한 숙적이며 <br>
+                    한쪽 손 대신 갈고리를 착용하고 있다.</p>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="button"><image src="peterpan_image/TOP.png" width="30" height="30"></a>
+</body>
+</html>
