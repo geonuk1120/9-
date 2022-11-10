@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>줄거리</title>
+    <style>
+        body {
+            background-image: url(image/story.jpg);
+        }
+        h2 {
+            font-size: 40px;
+            font-family: 궁서체;
+            font-weight: 400;
+        }
+        p{
+            font-size: 20px;
+            font-family: 궁서체;
+            font-weight: 800;
+        }
+    </style>
+    <script>
+        var p;
+        function init() {
+            p=document.getElementById('p');
+            p.onmouseover=over;
+            p.onmouseout=out;
+        }
+        function over() {
+            p.style.backgroundColor='pink';
+        }
+        function out() {
+            p.style.backgroundColor='white'
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h2> 줄거리 &nbsp;  
+        <a href='yeonho_index1.html' title="뒤로가기"><img src="image/go.jpg" width="100" height="100"></a>
+    </h2>
+    <hr>
+    <p>옛날, 나이가 많은 용왕이 병에 걸려 약을 찾는 중 의원이
+용왕에게 토끼의 간을 달여서 먹으면 낫는다고
+하였어요. 토끼를 잡으려 아무도 나서지 않던 그때,
+충신 자라가 나서서
+토끼의 간을 구해오겠다고 하였어요.
+자라가 육지에 올리가 토끼를 만나서
+토끼에게 용궁으로 가면 잘 살게 해주겠다고
+속여 용궁으로 데리고 오게 된답니다.</p>
+<p>용왕님이 토끼를 만나자 말씀하셨답니다.
+<p id="p">"토끼야 너의 간이 필요하니 어쩔수없이
+너를 잡아야 겠구나!"</p></p>
+<p>그러나 토끼는 머리를 굴려 말합니다.
+<p id="p">"아 용왕님 저는 간을 떼었다 붙였다 할수
+있어서 평상시에는 육지에 놔두고 다닙니다."</p></p>
+<p>그러자 용왕은 토끼에게 속아넘어가
+육지에 가서 간을 가져와라며 풀어주지요.
+거북이는 토끼를 등에 태우고 다시 육지에 가게 되요.</p>
+<p>하지만 토끼는 육지에 도착하자 거북이에게
+<p id="p">"간을 떼고 붙이는 동물이 어디있니?"
+라며 도망가버리고 맙니다.</p></p>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토끼전 메인 페이지</title>
+    <style>
+        body {
+            background-color: rgb(149, 204, 253);
+            background-image: url(image/main.jpg);
+            background-repeat: repeat-x;
+            
+        }
+        h2 {
+            font-size: 350%;
+            font-family: 궁서체;
+            font-weight: 400%;
+            margin-left: 200px;
+            margin-top: 1%;
+            padding:20px;
+        }
+        a {text-decoration: none;}
+        span:hover {font-size: 80%;}
+        li {list-style-type: none;}
+        #menu {
+            clear:both;
+            height: 40px;
+            width: 600px;
+            margin-left: 390px;
+            margin-top: 200px;
+            background-color: rgb(149, 204, 253);
+            color:black;
+            text-align: center;
+            padding-top: 15px;
+            font-size: 25px;
+            border: solid 0px white;
+            font-family: 궁서체;
+            font-weight: 400px;
+            
+        }
+        #menu li{
+            display:inline;
+        }
+        .item {
+            margin: 0 40px 0 40px;
+        }
+        #video {
+            margin-left: 430px;
+        }
+        #menu2 {
+            clear:both;
+            height: 40px;
+            width: 600px;
+            margin-left: 390px;
+            margin-top: 20px;
+            background-color: rgb(149, 204, 253);
+            color:black;
+            text-align: center;
+            padding-top: 15px;
+            font-size: 25px;
+            border: solid 0px white;
+            font-family: 궁서체;
+            font-weight: 400px;
+        }
+        #menu2 li {
+            display: inline;
+        }
+        .item2 {
+            margin: 0 30px 0 20px;
+            padding-top: 15px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2><a href='yeonho_index.html'><span>토끼전</span></a> </h2>
+    <ul id="menu">
+        <li class="item"><a href='yeonho_character.html' target="_blank" title="등장인물 보러가기" ><span>등장인물</span></a></li>
+        <li>|</li>
+        <li class="item"><a href='yeonho_story.html' target="_blank" title="줄거리 보러가기"><span>줄거리</span></a></li>
+        <li>|</li>
+        <li class="item"><a href='yeonho_history.html' target="_blank" title="유래 보러가기"><span>유래</span></a></li>
+    </ul>
+    <ul id="menu2">
+        <li class="item2"><a href='yeonho_login.html' target="_blank" title='로그인 하러가기'><span>로그인</span></a></li>
+        <li>|</li>
+        <li class="item2"><a href='yeonho_new.html' target="_blank" title='회원가입 하러가기'><span>회원가입</span></a></li>
+    </ul>
+    <div id="video">
+    <video width="650" height="320" controls>
+        <source src="image/video.mp4" type="video/mp4">
+        <source src="image/video.mp4" type="video/webm">
+        <source src="image/video.mp4" type="video/ogg">
+    </video>
+    </div>
+</body>
+</html>
