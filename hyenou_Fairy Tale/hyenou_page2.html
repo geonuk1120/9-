@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>양치기 소년</title>
+<style>
+	* {margin:0;padding:0;}
+	.section input[id*="slide"] {display:none;}
+	.section .slidewrap {max-width:100%;margin:0 auto;}
+	.section .slidelist {white-space:nowrap;font-size:0;overflow:hidden;position:relative;}
+	.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+	.section .slidelist > li > a {display:block;position:relative;}
+	.section .slidelist > li > a img {width:100%;}
+	.section .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+	/* input에 체크되면 슬라이드 효과 */
+	.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+	.section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+    .section input[id="slide04"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+	.section input[id="slide05"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-400%);}
+	.section input[id="slide06"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-500%);}
+    .section input[id="slide07"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-600%);}
+	.section input[id="slide08"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-700%);}
+	.section input[id="slide09"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-800%);}
+    .section input[id="slide10"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-900%);}
+	.section input[id="slide11"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1000%);}
+	.section input[id="slide12"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1100%);}
+    .section input[id="slide13"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1200%);}
+	.section input[id="slide14"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1300%);}
+	.section input[id="slide15"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1400%);}
+    .section input[id="slide16"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1500%);}
+	.section input[id="slide17"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1600%);}
+	.section input[id="slide18"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1700%);}
+    .section input[id="slide19"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1800%);}
+	.section input[id="slide20"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-1900%);}
+
+	/* input에 체크되면 텍스트 효과 */
+	.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+    .section input[id="slide04"]:checked ~ .slidewrap li:nth-child(4) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide04"]:checked ~ .slidewrap li:nth-child(4) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide05"]:checked ~ .slidewrap li:nth-child(5) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide05"]:checked ~ .slidewrap li:nth-child(5) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide06"]:checked ~ .slidewrap li:nth-child(6) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide06"]:checked ~ .slidewrap li:nth-child(6) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+    .section input[id="slide07"]:checked ~ .slidewrap li:nth-child(7) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide07"]:checked ~ .slidewrap li:nth-child(7) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide08"]:checked ~ .slidewrap li:nth-child(8) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide08"]:checked ~ .slidewrap li:nth-child(8) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide09"]:checked ~ .slidewrap li:nth-child(9) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide09"]:checked ~ .slidewrap li:nth-child(9) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+    .section input[id="slide10"]:checked ~ .slidewrap li:nth-child(10) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide10"]:checked ~ .slidewrap li:nth-child(10) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide11"]:checked ~ .slidewrap li:nth-child(11) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide11"]:checked ~ .slidewrap li:nth-child(11) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide12"]:checked ~ .slidewrap li:nth-child(12) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide12"]:checked ~ .slidewrap li:nth-child(12) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+    .section input[id="slide13"]:checked ~ .slidewrap li:nth-child(13) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide13"]:checked ~ .slidewrap li:nth-child(13) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide14"]:checked ~ .slidewrap li:nth-child(14) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide14"]:checked ~ .slidewrap li:nth-child(14) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide15"]:checked ~ .slidewrap li:nth-child(15) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide15"]:checked ~ .slidewrap li:nth-child(15) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+    .section input[id="slide16"]:checked ~ .slidewrap li:nth-child(16) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide16"]:checked ~ .slidewrap li:nth-child(16) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide17"]:checked ~ .slidewrap li:nth-child(17) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide17"]:checked ~ .slidewrap li:nth-child(17) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+	.section input[id="slide18"]:checked ~ .slidewrap li:nth-child(18) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide18"]:checked ~ .slidewrap li:nth-child(18) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+    .section input[id="slide19"]:checked ~ .slidewrap li:nth-child(19) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide19"]:checked ~ .slidewrap li:nth-child(19) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+    .section input[id="slide20"]:checked ~ .slidewrap li:nth-child(20) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+	.section input[id="slide20"]:checked ~ .slidewrap li:nth-child(20) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+
+	/* 좌,우 슬라이드 버튼 */
+	.slide-control > div {display:none;}
+	.section .left {left:-30px;background:url('./hyenou_img/left.png') center center / 100% no-repeat;}
+	.section .right {right:-30px;background:url('./hyenou_img/right.png') center center / 100% no-repeat;}
+	.section input[id="slide01"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
+	.section input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
+	.section input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
+    .section input[id="slide04"]:checked ~ .slidewrap .slide-control > div:nth-child(4) {display:block;}
+	.section input[id="slide05"]:checked ~ .slidewrap .slide-control > div:nth-child(5) {display:block;}
+	.section input[id="slide06"]:checked ~ .slidewrap .slide-control > div:nth-child(6) {display:block;}
+    .section input[id="slide07"]:checked ~ .slidewrap .slide-control > div:nth-child(7) {display:block;}
+	.section input[id="slide08"]:checked ~ .slidewrap .slide-control > div:nth-child(8) {display:block;}
+	.section input[id="slide09"]:checked ~ .slidewrap .slide-control > div:nth-child(9) {display:block;}
+    .section input[id="slide10"]:checked ~ .slidewrap .slide-control > div:nth-child(10) {display:block;}
+	.section input[id="slide11"]:checked ~ .slidewrap .slide-control > div:nth-child(11) {display:block;}
+	.section input[id="slide12"]:checked ~ .slidewrap .slide-control > div:nth-child(12) {display:block;}
+    .section input[id="slide13"]:checked ~ .slidewrap .slide-control > div:nth-child(13) {display:block;}
+	.section input[id="slide14"]:checked ~ .slidewrap .slide-control > div:nth-child(14) {display:block;}
+	.section input[id="slide15"]:checked ~ .slidewrap .slide-control > div:nth-child(15) {display:block;}
+    .section input[id="slide16"]:checked ~ .slidewrap .slide-control > div:nth-child(16) {display:block;}
+	.section input[id="slide17"]:checked ~ .slidewrap .slide-control > div:nth-child(17) {display:block;}
+	.section input[id="slide18"]:checked ~ .slidewrap .slide-control > div:nth-child(18) {display:block;}
+    .section input[id="slide19"]:checked ~ .slidewrap .slide-control > div:nth-child(19) {display:block;}
+	.section input[id="slide20"]:checked ~ .slidewrap .slide-control > div:nth-child(20) {display:block;}
+
+	/* 페이징 */
+	.slide-pagelist {text-align:center;padding:20px;}
+	.slide-pagelist > li {display:inline-block;vertical-align:middle;}
+	.slide-pagelist > li > label {display:block;padding:8px 30px;border-radius:30px;background:#ccc;margin:20px 10px;cursor:pointer;}
+	.section input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#999;}
+	.section input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#999;}
+	.section input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:#999;}
+    .section input[id="slide04"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(4) > label {background:#999;}
+	.section input[id="slide05"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(5) > label {background:#999;}
+	.section input[id="slide06"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(6) > label {background:#999;}
+    .section input[id="slide07"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(7) > label {background:#999;}
+	.section input[id="slide08"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(8) > label {background:#999;}
+	.section input[id="slide09"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(9) > label {background:#999;}
+    .section input[id="slide10"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(10) > label {background:#999;}
+	.section input[id="slide11"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(11) > label {background:#999;}
+    .section input[id="slide12"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(12) > label {background:#999;}
+	.section input[id="slide13"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(13) > label {background:#999;}
+	.section input[id="slide14"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(14) > label {background:#999;}
+    .section input[id="slide15"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(15) > label {background:#999;}
+	.section input[id="slide16"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(16) > label {background:#999;}
+	.section input[id="slide17"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(17) > label {background:#999;}
+    .section input[id="slide18"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(18) > label {background:#999;}
+	.section input[id="slide19"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(19) > label {background:#999;}
+    .section input[id="slide20"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(20) > label {background:#999;}
+    body {
+        font-family: '돋움';
+        font-size: 14px;
+        color: #444444;
+    }
+    li {
+        list-style-type: none;
+    }
+    .claer {
+        clear: both;
+    }
+    header {
+        width: 1140px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    #logo {
+        float: left;
+        margin: 20px 0 0 20px;
+    }
+    #menus {
+        float: right;
+    }
+    #main_menu {
+        margin-top: 20px;
+        font-family: '맑은고딕';
+        font-size: 20px;
+        color: black;
+    }
+    #main_menu li {
+        display: inline;
+        margin-left: 80px;
+    }
+    #main_img {
+        width: 100%;
+        height: 100px;
+        background-image: url('img/logo1.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        margin-top: 20px;
+    }
+    #contets {
+        width: 1140px;
+        margin: 0 auto;
+    }
+    #sub_menu {
+        width: 234px;
+        float: left;
+        margin-top: 25px;
+    }
+    #sub_menu h3 {
+        font-size: 18px;
+        color: #5df0c0;
+        padding: 12px;
+        background-color: #516e7f
+    }
+    #sub_menu li {
+        padding: 10px;
+        border-bottom: dotted 1px #cccccc
+    }
+    #main_contents {
+        width: 880px;
+        position :absolute;
+        transform: translate(40%, 0%);
+        margin-top: 25px;
+        border: solid 1px black
+    }
+    #main_contents h3 {
+        font-size: 22px;
+        padding-bottom: 8px;
+        border-bottom: solid 1px #cccccc
+    }
+    #main_contents p {
+        margin-top: 30px;
+        line-height: 180%
+    }
+    #main_contents #figure {
+        margin-top: 30px;
+        text-align: center;
+    }
+    #main_contents li {
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+    <section id="main_img">
+        <a href='hyenou_index.html'><h3 float="left">처음 화면</h3></a>
+    </section>
+    <section id="contents">
+        <nav id="sub_menu">
+            <h3>메뉴</h3>
+            <ul>
+                <li><a href="hyenou_page1.html">줄거리</a></li>
+                <li><a href="hyenou_page2.html">동화 보기</a></li>
+                <li><a href="hyenou_page3.html">양치기 소년 정보</a></li>
+                <li><a href="hyenou_page4.html">각색판</a></li>
+            </ul>
+        </nav>
+        <div id="main_contents">
+            <h3>책 보기</h3>
+            <div class="section">
+                <input type="radio" name="slide" id="slide01" checked="">
+                <input type="radio" name="slide" id="slide02">
+                <input type="radio" name="slide" id="slide03">
+                <input type="radio" name="slide" id="slide04">
+                <input type="radio" name="slide" id="slide05">
+                <input type="radio" name="slide" id="slide06">
+                <input type="radio" name="slide" id="slide07">
+                <input type="radio" name="slide" id="slide08">
+                <input type="radio" name="slide" id="slide09">
+                <input type="radio" name="slide" id="slide10">
+                <input type="radio" name="slide" id="slide11">
+                <input type="radio" name="slide" id="slide12">
+                <input type="radio" name="slide" id="slide13">
+                <input type="radio" name="slide" id="slide14">
+                <input type="radio" name="slide" id="slide15">
+                <input type="radio" name="slide" id="slide16">
+                <input type="radio" name="slide" id="slide17">
+                <input type="radio" name="slide" id="slide18">
+                <input type="radio" name="slide" id="slide19">
+                <input type="radio" name="slide" id="slide20">
+                <div class="slidewrap">
+                    
+                    <ul class="slidelist">
+                        <!-- 슬라이드 영역 -->
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/1.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/2.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/3.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/4.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/5.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/6.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/7.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/8.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/9.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/10.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/11.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/12.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/13.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/14.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/15.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/16.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/16.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/17.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/18.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/19.png">
+                            </a>
+                        </li>
+                        <li class="slideitem">
+                            <a>
+                                <img src="./hyenou_img/20.png">
+                            </a>
+                        </li>
+        
+            
+                        <!-- 좌,우 슬라이드 버튼 -->
+                        <div class="slide-control">
+                            <div>
+                                <label for="slide20" class="left"></label>
+                                <label for="slide02" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide01" class="left"></label>
+                                <label for="slide03" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide02" class="left"></label>
+                                <label for="slide04" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide03" class="left"></label>
+                                <label for="slide05" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide04" class="left"></label>
+                                <label for="slide06" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide05" class="left"></label>
+                                <label for="slide07" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide06" class="left"></label>
+                                <label for="slide08" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide07" class="left"></label>
+                                <label for="slide09" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide08" class="left"></label>
+                                <label for="slide10" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide09" class="left"></label>
+                                <label for="slide11" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide10" class="left"></label>
+                                <label for="slide12" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide11" class="left"></label>
+                                <label for="slide13" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide12" class="left"></label>
+                                <label for="slide14" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide13" class="left"></label>
+                                <label for="slide15" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide14" class="left"></label>
+                                <label for="slide16" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide15" class="left"></label>
+                                <label for="slide17" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide16" class="left"></label>
+                                <label for="slide18" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide17" class="left"></label>
+                                <label for="slide19" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide18" class="left"></label>
+                                <label for="slide20" class="right"></label>
+                            </div>
+                            <div>
+                                <label for="slide19" class="left"></label>
+                                <label for="slide01" class="right"></label>
+                            </div>
+                        </div>
+            
+                    </ul>
+                    <!-- 페이징 -->
+                    <ul class="slide-pagelist">
+                        <li><label for="slide01"></label></li>
+                        <li><label for="slide02"></label></li>
+                        <li><label for="slide03"></label></li>
+                        <li><label for="slide04"></label></li>
+                        <li><label for="slide05"></label></li>
+                        <li><label for="slide06"></label></li>
+                        <li><label for="slide07"></label></li>
+                        <li><label for="slide08"></label></li>
+                        <li><label for="slide09"></label></li>
+                        <li><label for="slide010"></label></li>
+                        <li><label for="slide011"></label></li>
+                        <li><label for="slide012"></label></li>
+                        <li><label for="slide013"></label></li>
+                        <li><label for="slide014"></label></li>
+                        <li><label for="slide015"></label></li>
+                        <li><label for="slide016"></label></li>
+                        <li><label for="slide017"></label></li>
+                        <li><label for="slide018"></label></li>
+                        <li><label for="slide019"></label></li>
+                        <li><label for="slide020"></label></li>
+                    </ul>
+                </div>
+            
+                
+            </div>
+        </div>
+    </section>
+    <div class="clear"></div>
+</body>
+</html>
