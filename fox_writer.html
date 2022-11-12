@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table, th, td{ 
+        border: 1px;
+        padding: 5px; 
+        background-color: white;
+    }
+    table{
+        margin-left:auto;
+        margin-right:auto;
+        border-collapse : collapse;
+    }
+    ul{
+        background-color: lightgreen;
+        border:solid 1px black;
+        text-align: center;
+    }
+    li{
+        display:inline;
+        margin:0 20px 0 20px;
+    }    
+    header{
+        font-size: 50px;
+        border: solid 1px black;
+        background-color: aliceblue;
+        text-align: center;
+    }
+    section{ 
+            display : block;
+            margin : auto;
+    }
+    </style>
+    <script>
+        function drawImage(){
+            var sel= document.getElementById("books");
+            var img= document.getElementById("bookimage");
+            img.src= sel.options[sel.selectedIndex].value;
+        }
+    </script>
+</head>
+<body>
+    <div> 
+        <div>
+
+        </div>
+        <div>
+        </div>
+    </div>
+    <header> 
+        <label>작가</label>
+    </header>
+    <nav>
+        <ul>
+        <li>|</li>
+        <li><a href="fox_writer.html">저자</a></li>
+        <li>|</li>
+        <li><a href="fox_story.html">줄거리</a></li>
+        <li>|</li>
+        </ul> 
+    </nav>
+    <section style="clear: both;">
+        <div>
+            <table style="text-align: center;">
+                <tr>
+                    <td>이름</td><td>프란치스카 비어만(Franziska Biermann)</td><td rowspan="2"><img src="fox_image/fox_mom.jpg"></td>
+                </tr>
+                <tr>
+                    <td>출생지</td><td>독일 빌레펠트</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <label>대표작</label><br>
+                        <select id="books" onchange="drawImage()">
+                            <option value="fox_image/fox.jpg">책 먹는 여우</option>
+                            <option value="fox_image/Jack.jpg">잭키마론과 악당 황금손</option>
+                        </select>
+                    </td>
+                    <td style="padding: 10px;" colspan="2"><img id="bookimage" src="fox_image/fox.jpg" alt=""></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div style="text-align: center;">
+            <button><a href="index_fox.html">돌아가기</a></button>
+        </div>
+    </footer>
+ 
+</body>
+</html>  
