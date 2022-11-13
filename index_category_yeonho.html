@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body, code {
+            font: 0.75em 'Open Sans','Nanum Gothic','Malgun Gothic','맑은 고딕','돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+            color: #111111;
+            background: #fff;
+        }
+        div{
+            display: block;
+        }
+        .page_header {
+            min-width: 1240px;
+        }
+        #header_all{
+            padding: 0 60px;
+        }
+        #header {
+            font-size: 0;
+            z-index: 9999;
+            width: 1240px;
+            margin: 0 auto;
+            position: relative;
+            height: 86px;
+            padding: 50px 0 0;
+        }
+        #header .inner {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+        #header .inner .left_menu {
+            display: inline-block;
+            width: 350px;
+            float: left;
+            margin: 0;
+            text-align: left;
+        }
+        #header .inner .left_menu li {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        #header .inner .left_menu a {
+            margin: 0 0 0 17px;
+            font-size: 14px;    
+            letter-spacing: 1px;
+        }
+        #header .inner .right_menu {
+            display: inline-block;
+            position: relative;
+            font-size: 0;
+            vertical-align: middle;
+            width: 350px;
+            float: right;
+            margin: 6px 0 0;
+            text-align: right;
+        }
+        .right_menu .search #find_btn a {
+            padding: 0;
+            vertical-align: top;
+            margin: 0;
+        }
+        #header .inner .right_menu li.all_list {
+            float: right;
+        }
+        #header .inner .logo {
+            display: inline-block;
+            padding: 3px 0 0;
+            position: relative;
+            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+        }
+        hr.layout {
+            display: none;
+        }
+        #cate_all {
+            height: 33px;
+            border-top: 1px solid #ececec;
+            border-bottom: 1px solid #ececec;
+            position: absolute;
+            width: 100%;
+            top: 140px;
+            padding: 19px 0 28px;
+        }
+        .xans-layout-category {
+            position: absolute;
+            min-width: 1200px;
+            margin: 0 0 10px;
+            width: 100%;
+            text-align: center;
+            clear: both;
+        }
+        .xans-layout-category {
+            background: #fff;
+            z-index: 1001;
+        }
+        .xans-layout-category .position {
+            text-align: center;
+        }
+        
+        .xans-layout-category .position > ul > li {
+            position: relative;
+            display: inline-block;
+            z-index: 15;
+            margin: 10px;
+            font-size: 15px;
+        }
+        #wrap {
+            position: relative;
+            width: 1240px;
+            margin: 130px auto 0;
+        }
+        #container {
+            width: 1240px;
+            margin: 0 auto;
+        }
+        #contents {
+            width: 1240px;
+        }
+        .xans-product-menupackage {
+            margin: 0 0px 5px;
+        }
+        .xans-product-menupackage .title {
+            min-height: 30px;
+            text-align: center;
+            color: #000000;
+            margin: 27px 0 20px;
+            padding: 15px 0 18px;
+        }
+        .xans-product-menupackage .title h2 {
+            letter-spacing: 1px;
+            font-size: 21px;
+        }
+        .xans-product-menupackage .title h2, .xans-product-menupackage .title .likeButton {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="page_header">
+        <div id="header_all">
+            <div id="header">
+                <div class="inner">
+                    <div class="left_menu">
+                        <li>
+                            <a href="/member/login.html" onmouseover="this.style.color='red'"
+                            onmouseout="this.style.color='black'">로그인</a>
+                            <a href="/member/join.html" onmouseover="this.style.color='red'"
+                            onmouseout="this.style.color='black'">회원가입</a>
+                        </li>
+                    </div>
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/logo2.png" alt="로고">
+                        </a>
+                    </div>
+                    <div class="right_menu">
+                        <ul>
+                            <a href="#none"><img src="img/serch.png" alt="검색버튼"></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cate_all">
+            <div id="category" class="xans-element- xans-layout xans-layout-category"><div class="position">
+                <ul>
+                    <li class="xans-record-"><a href="index.html" onmouseover="this.style.color='red'"
+                        onmouseout="this.style.color='black'">강아지똥</a></li>
+                    <li class="xans-record-"><a href="index_category_fox.html"onmouseover="this.style.color='red'"
+                        onmouseout="this.style.color='black'">책 먹는 여우</a></li>
+                    <li class="xans-record-"><a href="index_category_peterpan.html"onmouseover="this.style.color='red'"
+                        onmouseout="this.style.color='black'">피터팬</a></li>
+                    <li class="xans-record-"><a href="index_category_hyenou.html"onmouseover="this.style.color='red'"
+                        onmouseout="this.style.color='black'">양치기소년</a></li>
+                    <li class="xans-record-"><a href="index_category_yeonho.html"onmouseover="this.style.color='red'"
+                        onmouseout="this.style.color='black'">토끼전</a></li>
+                </ul>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div id="wrap">
+        <div id="container">
+            <div id="contents">
+            </div>
+        </div>
+    </div>
+    <div class="xans-element- xans-product xans-product-menupackage ">
+        <div class="xans-element- xans-product xans-product-headcategory title ">
+            <p class="title_img"></p>
+        <h2>
+            <span>토끼전</span>
+        </h2>
+            <div>
+                <a href="yeonho_index.html">
+                    <img src="img/토끼전.jpg" style="margin: 50px; width: 340px;">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
